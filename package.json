@@ -1,0 +1,23 @@
+{
+  "name": "replaysetup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Murhaf2211/ReplaySetup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Murhaf2211/ReplaySetup/issues"
+  },
+  "homepage": "https://github.com/Murhaf2211/ReplaySetup#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
