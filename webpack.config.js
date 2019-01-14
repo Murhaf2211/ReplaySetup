@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCss = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
@@ -21,6 +22,19 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.s?css?/i,
+        use:[
+          {
+            loader: MiniCss.loader,
+            options:{
+              publicpath : '/dist'
+            }
+          },
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
@@ -28,6 +42,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html'
+    }),
+    new MiniCss({
+      filename: 'main.css'
     })
   ]
 }
